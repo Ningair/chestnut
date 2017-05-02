@@ -4,18 +4,42 @@ import java.util.Date;
 
 public class BaseEntity {
 	
-	private Date   createDateTime;
-	private String createUserId;
-	private Date   lastUpdateDateTime;
-	private String lastUpdateUserId;
+	protected String uid;
+	protected Date   createDateTime;
+	protected String createUserId;
+	protected Date   lastUpdateDateTime;
+	protected String lastUpdateUserId;
 	
 	@Override
-	public String toString() {
-		return "BaseEntity [createDateTime=" + createDateTime + ", createUserId="
-				+ createUserId + ", lastUpdateDateTime=" + lastUpdateDateTime + ", lastUpdateUserId=" + lastUpdateUserId
-				+ "]";
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((uid == null) ? 0 : uid.hashCode());
+		return result;
 	}
-
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		BaseEntity other = (BaseEntity) obj;
+		if (uid == null) {
+			if (other.uid != null)
+				return false;
+		} else if (!uid.equals(other.uid))
+			return false;
+		return true;
+	}
+	
+	public String getUid() {
+		return uid;
+	}
+	public void setUid(String uid) {
+		this.uid = uid;
+	}
 	public Date getCreateDateTime() {
 		return createDateTime;
 	}

@@ -28,7 +28,7 @@ public class UserInfoDao {
 
 			@Override
 			public void processRow(ResultSet rs) throws SQLException {
-				userInfo.setUserId(rs.getString("user_id"));
+				userInfo.setUid(rs.getString("user_id"));
 				userInfo.setUserNum(rs.getString("user_num"));
 				userInfo.setUserName(rs.getString("user_name"));
 			}
