@@ -2,22 +2,15 @@ package orz.liketream.chestnut.domain;
 
 public class UserAction extends BaseEntity{
 
-	private String actionId;
 	private String actionCode ;
 	private String userId;
 	private String userIp;
 	
 	@Override
 	public String toString() {
-		return "UserAction [actionId=" + actionId + ", actionCode=" + actionCode + ", userId=" + userId + ", userIp="
-				+ userIp + "]";
-	}
-	
-	public String getActionId() {
-		return actionId;
-	}
-	public void setActionId(String actionId) {
-		this.actionId = actionId;
+		return "UserAction [actionCode=" + actionCode + ", userId=" + userId + ", userIp=" + userIp + ", uid=" + uid
+				+ ", createDateTime=" + createDateTime + ", createUserId=" + createUserId + ", lastUpdateDateTime="
+				+ lastUpdateDateTime + ", lastUpdateUserId=" + lastUpdateUserId + "]";
 	}
 	public String getActionCode() {
 		return actionCode;

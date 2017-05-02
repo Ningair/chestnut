@@ -2,20 +2,14 @@ package orz.liketream.chestnut.domain;
 
 public class UserAuth extends BaseEntity {
 
-	private String authId;
 	private String password;
 	private String userId;
 	
 	@Override
 	public String toString() {
-		return "UserAuth [authId=" + authId + ", password=********, userId=" + userId + "]";
-	}
-	
-	public String getAuthId() {
-		return authId;
-	}
-	public void setAuthId(String authId) {
-		this.authId = authId;
+		return "UserAuth [password=" + password + ", userId=" + userId + ", uid=" + uid + ", createDateTime="
+				+ createDateTime + ", createUserId=" + createUserId + ", lastUpdateDateTime=" + lastUpdateDateTime
+				+ ", lastUpdateUserId=" + lastUpdateUserId + "]";
 	}
 	public String getPassword() {
 		return password;
