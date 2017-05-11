@@ -88,6 +88,7 @@
 		<groupId>org.slf4j</groupId>
 		<artifactId>slf4j-api</artifactId>
 		<version>${slf4j.version}</version>
+		<scope>compile</scope>
 	</dependency>
 
 	<dependency>
@@ -98,21 +99,10 @@
 	</dependency>
 	
 	<dependency>
-	  <groupId>org.slf4j</groupId>
-	  <artifactId>slf4j-nop</artifactId>
-	  <version>1.8.0-alpha1</version>
-	</dependency>
-	
-	<dependency>
-	  <groupId>org.slf4j</groupId>
-	  <artifactId>log4j-over-slf4j</artifactId>
-	  <version>1.7.25</version>
-	</dependency>
-	
-	<dependency>
-		<groupId>commons-logging</groupId>
-		<artifactId>commons-logging</artifactId>
-		<version>1.2</version>
+	    <groupId>org.slf4j</groupId>
+	    <artifactId>slf4j-simple</artifactId>
+	    <version>${slf4j.version}</version>
+	    <scope>runtime</scope>
 	</dependency>
   	
 	<!-- Test -->
